@@ -1,5 +1,4 @@
 def checkio(crossword, words):
-
     return None
 
 
@@ -12,8 +11,9 @@ if __name__ == '__main__':
             [11, 0, 16, 0, 5],
             [26, 3, 14, 20, 6]
         ],
-        ['hello', 'habit', 'lemma', 'ozone', 'bimbo', 'trace']) == [['h', 'e', 'l', 'l', 'o'],
-                                                                    ['a', ' ', 'e', ' ', 'z'],
-                                                                    ['b', 'i', 'm', 'b', 'o'],
-                                                                    ['i', ' ', 'm', ' ', 'n'],
-                                                                    ['t', 'r', 'a', 'c', 'e']]
+        ['hello', 'habit', 'lemma', 'ozone', 'bimbo', 'trace']
+    ) == [['h', 'e', 'l', 'l', 'o'],
+          ['a', ' ', 'e', ' ', 'z'],
+          ['b', 'i', 'm', 'b', 'o'],
+          ['i', ' ', 'm', ' ', 'n'],
+          ['t', 'r', 'a', 'c', 'e']]
