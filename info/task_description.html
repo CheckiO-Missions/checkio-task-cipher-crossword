@@ -1,9 +1,20 @@
 <p>
-    <i>( Describe task in general )</i>
+    We all know about crosswords. A cipher crossword replaces the clues for each entry with clues for each white cell of the grid -
+    an integer from 1 to 26 inclusive. The objective, as any other crossword, is to determine the proper letter for each cell; in a
+    cipher crossword, the 26 numbers serve as a cipher for those letters: cells that share matching numbers are filled
+    with matching letters, and no two numbers stand for the same letter. All resultant entries must be valid words.
 </p>
 
 <p>
-    Sum two passed ints
+    In this task you should solve a cipher crossword. You are given a crossword template as a list of lists (2D array)
+    with numbers (from 0 to 26), where <strong>0</strong> is blank cell, other numbers are encrypted letters.
+    Also you have a list with words for that crossword. You should fill that template with given word and return
+    the solved crossword as a list of list with letters. Blank cells replace with whitespaces (0 => " ").
+</p>
+
+<p>
+    The words are placed in rows and columns only by vertical or horizontal. Words can not be placed in neighbours
+    rows or neighbours columns.
 </p>
 
 <p style="text-align: center;">
@@ -17,13 +28,13 @@
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Output: </strong> Int.
 </p>
-
 
 
 <div class="for_info_only">
     <p><i>( Put some usage examples )</i></p>
+
     <p>
         <strong>Example:</strong>
     </p>
