@@ -63,7 +63,8 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             $content.find('.output').html('&nbsp;Your result:&nbsp;' + ext.JSON.encode(userResult));
 
             if (!result) {
-                $content.find('.call').html('Fail: checkio(' + ext.JSON.encode(checkioInput) + ')');
+                $content.find('.call').html('Fail: checkio(' + ext.JSON.encode(checkioInput[0]) + "," +
+                    ext.JSON.encode(checkioInput[0])+ ')');
                 $content.find('.answer').html('Right result:&nbsp;' + ext.JSON.encode(rightResult));
                 $content.find('.answer').addClass('error');
                 $content.find('.output').addClass('error');
@@ -75,13 +76,8 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
             }
             //Dont change the code before it
 
-            //Your code here about test explanation animation
-            //$content.find(".explanation").html("Something text for example");
-            //
-            //
-            //
-            //
-            //
+            var canvas = new CipherCrosswordCanvas();
+            canvas.createCanvas($content.find(".explanation")[0], checkioInput[0], checkioInput[1], rightResult);
 
 
             this_e.setAnimationHeight($content.height() + 60);
@@ -106,10 +102,60 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
         var colorGrey1 = "#EBEDED";
 
         var colorWhite = "#FFFFFF";
-        //Your Additional functions or objects inside scope
-        //
-        //
-        //
+
+
+        function CipherCrosswordCanvas() {
+            var x0 = 10,
+                y0 = 10,
+                cellSize = 50;
+
+            var cellN = 5;
+
+            var sizeX = cellSize * 5 + x0 * 2;
+            var sizeY = cellSize * 5 + y0 * 2;
+
+            var attrCell = {"stroke": colorBlue4, "fill": colorBlue1, "stroke-width": 2};
+            var attrNumber = {"stroke": colorBlue4, "font-size": cellSize / 5, "font-family": 'verdana'};
+            var attrLetter = {"stroke": colorBlue4, "font-size": cellSize * 0.5, "font-family": 'verdana'};
+
+
+            var paper;
+
+            this.createCanvas = function(dom, template, words, answer){
+                paper = Raphael(dom, sizeX, sizeY, 0, 0);
+
+                for (var row = 0; row < template.length; row++) {
+                    for (var col = 0; col < template[row].length; col++) {
+                        //console.log(sizeY - cellSize * (cellN - row) - y0);
+                        var cell = paper.rect(
+                            x0 + cellSize * col,
+                            sizeY - cellSize * (cellN - row) - y0,
+                            cellSize,
+                            cellSize
+                        ).attr(attrCell);
+                        if (template[row][col] === 0){
+                            cell.attr("fill", colorBlue3);
+                        }
+                        else {
+                            paper.text(
+                                x0 + cellSize * (col + 0.8),
+                                sizeY - cellSize * (cellN - row - 0.2) - y0,
+                                template[row][col]
+                            ).attr(attrNumber);
+                            paper.text(
+                                x0 + cellSize * (col + 0.5),
+                                sizeY - cellSize * (cellN - row - 0.5) - y0,
+                                answer[row][col]
+                            ).attr(attrLetter);
+                        }
+                    }
+                }
+
+
+
+            }
+
+        }
 
 
     }
