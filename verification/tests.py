@@ -37,7 +37,7 @@ TESTS = {
                     [3, 0, 26, 0, 13],
                     [8, 6, 15, 17, 13]
                 ],
-                ['world', 'tache', 'rings', 'water', 'racon', 'dress'],
+                ['world', 'rings', 'tache', 'water', 'racon', 'dress'],
             ],
             "answer": [
                 ['w', 'o', 'r', 'l', 'd'],
@@ -69,9 +69,23 @@ TESTS = {
             ]
         },
         {
-            "input": [6, 7],
-            "answer": 13,
-            "explanation": "6+7=?"
+            "input": [
+                [
+                    [14, 9, 24, 10, 14],
+                    [24, 0, 13, 0, 13],
+                    [13, 26, 13, 20, 18],
+                    [6, 0, 25, 0, 9],
+                    [14, 6, 9, 3, 14]
+                ],
+                ['sodas', 'loofa', 'slots', 'stars', 'ovoid', 'sales']
+            ],
+            "answer": [
+                ['s', 'a', 'l', 'e', 's'],
+                ['l', ' ', 'o', ' ', 'o'],
+                ['o', 'v', 'o', 'i', 'd'],
+                ['t', ' ', 'f', ' ', 'a'],
+                ['s', 't', 'a', 'r', 's'],
+            ]
         }
     ]
 }
