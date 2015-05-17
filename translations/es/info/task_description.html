@@ -1,0 +1,78 @@
+<p>
+    Todo el mundo ha intentado resolver un crucigrama en alg&uacute;n momento de sus vidas,
+    pero nosotros vamos a complicar las cosas un poco, adicionando un sistema de cifrado al
+    juego cl&aacute;sico. Un crucigrama cifrado reemplaza las pistas para cada entrada con
+    pistas para cada casilla blanca de la cuadr&iacute;cula. Estas pistas son n&uacute;meros enteros
+    de 1 a 26, inclusive. El objetivo, como con cualquier otro crucigrama, es determinar
+    la letra correcta para cada celda.  En un crucigrama cifrado, los 26 n&uacute;meros se
+    utilizan para codificar las letras de la siguiente forma: las celdas que comparten
+    un mismo n&uacute;mero se rellenan con la misma letra, y no existen dos n&uacute;meros que
+    representen la misma letra. Todos los resultados deben ser palabras v&aacute;lidas en ingl&eacute;s.
+</p>
+
+<p>
+    Para esta misi&oacute;n deber&aacute;s resolver el crucigrama cifrado. Se te dar&aacute; la plantilla del crucigrama
+    como una lista de listas (array 2D) con n&uacute;meros (de 0 a 26), donde <strong>0</strong> es una
+    celda en blanco y los otros n&uacute;meros representan letras codificadas. Se te proporcionar&aacute;
+    tambi&eacute;n una lista de palabras para el crucigrama. Deber&aacute;s  llenar la plantilla con las
+    palabras entregadas, y devolver el crucigrama resuelto, como una lista de listas con
+    letras. Las celdas en blanco se sustituyen por espacios en blanco (0 => " ").
+</p>
+
+<p>
+  Las palabras se colocan en filas y columnas, NUNCA en diagonales. El crucigrama contiene seis
+  palabras con cinco letras cada una.  Las palabras se ubican sobre una cuadr&iacute;cula.
+</p>
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="cipher-crossword" src="{{MEDIA}}cipher-crossword.png" alt="cipher-crossword" width="600px"/>
+    <img class="for_editor_only" title="cipher-crossword" src="{{MEDIA}}cipher-crossword.png" alt="cipher-crossword" width="380px"/>
+</p>
+
+<p>
+    <strong>Datos de Entrada: </strong>
+    Un crucigrama cifrado como una lista de listas con enteros (<em>int</em>); y las palabras
+    a utilizar, como una lista de cadenas (<em>str</em>).
+</p>
+
+<p>
+    <strong>Salida: </strong> La soluci&oacute;n del crucigrama, como una lista de listas con letras.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Ejemplo:</strong>
+    </p>
+    <pre class="brush: python">checkio(
+    [
+        [21, 6, 25, 25, 17],
+        [14, 0, 6, 0, 2],
+        [1, 11, 16, 1, 17],
+        [11, 0, 16, 0, 5],
+        [26, 3, 14, 20, 6]
+    ],
+    ['hello', 'habit', 'lemma', 'ozone', 'bimbo', 'trace']
+) == [['h', 'e', 'l', 'l', 'o'],
+      ['a', ' ', 'e', ' ', 'z'],
+      ['b', 'i', 'm', 'b', 'o'],
+      ['i', ' ', 'm', ' ', 'n'],
+      ['t', 'r', 'a', 'c', 'e']]</pre>
+</div>
+
+
+<p class="for_info_only">
+    <strong>&iquest;C&oacute;mo se usa?:</strong>
+    Este es un ejemplo de problemas con restricciones, en donde se te indican
+    algunas reglas y debes tratar de encontrar  una combinaci&oacute;n que se ajuste
+    a dichas reglas.  Este concepto puede ayudar, por ejemplo, a resolver conflictos
+    con horarios - una situaci&oacute;n com&uacute;n en la que se encuentran muchas variables y
+    restricciones- entre otras cosas.
+
+</p>
+
+
+<p><strong>Condiciones: </strong><br>
+    |crossword| = 5x5<br>
+    &forall; x ∈ crossword : 1 &le; x &le; 26
+</p>
