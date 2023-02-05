@@ -50,7 +50,7 @@ requirejs(['ext_editor_1', 'jquery_190', 'raphael_210'],
                 return false;
             }
 
-            var checkioInput = data.in;
+            var checkioInput = data.in[0];
             var rightResult = data.ext["answer"];
             var userResult = data.out;
             var result = data.ext["result"];

@@ -1,4 +1,4 @@
-<p>
+<p style="text-align: justify">
     Everyone has tried solving a crossword puzzle at some point in their lives. 
     We're going to mix things up by adding a cipher to the classic puzzle.
     A cipher crossword replaces the clues for each entry with clues for each white cell of the grid. 
@@ -8,11 +8,11 @@
     with matching letters, and no two numbers stand for the same letter. All resulting entries must be valid words.
 </p>
 
-<p>
-    For this task you should solve the cipher crossword. You are given a crossword template as a list of lists (2D array)
+<p style="text-align: justify">
+    For this task you should solve the cipher crossword. You are given a crossword template as a{% if is_js %}n array of arrays{% else %} list of lists{% endif %} (2D array)
     with numbers (from 0 to 26), where <strong>0</strong> is a blank cell and other numbers are encrypted letters.
-    You will be given a list of words for the crossword puzzle. You should fill that template with a given word and return
-    the solved crossword as a list of lists with letters. Blank cells are replaced with whitespaces (0 => " ").
+    You will be given a{% if is_js %}n array{% else %} list{% endif %} of words for the crossword puzzle. You should fill that template with a given word and return
+    the solved crossword as a{% if is_js %}n array of arrays{% else %} list of lists{% endif %} with letters. Blank cells are replaced with whitespaces (0 => " ").
 </p>
 
 <p>
@@ -26,46 +26,36 @@
 </p>
 
 <p>
-    <strong>Input: </strong> The Cipher Crossword as a list of lists with integers. Words as a list of strings.
+    <strong>Input:</strong> The Cipher Crossword as a{% if is_js %}n array of arrays with numbers{% else %} list of lists with integers{% endif %}. Words as a{% if is_js %}n array{% else %} list{% endif %} of strings.
 </p>
 
 <p>
-    <strong>Output: </strong> The solution to the Crossword as a list of lists with letters.
+    <strong>Output:</strong> The solution to the Crossword as a{% if is_js %}n array of arrays{% else %} list of lists{% endif %} with letters.
 </p>
 
 
 <div class="for_info_only">
     <p>
-        <strong>Example:</strong>
+        <strong>Examples:</strong>
     </p>
-    <pre class="brush: python">checkio(
-    [
-        [21, 6, 25, 25, 17],
-        [14, 0, 6, 0, 2],
-        [1, 11, 16, 1, 17],
-        [11, 0, 16, 0, 5],
-        [26, 3, 14, 20, 6]
-    ],
-    ['hello', 'habit', 'lemma', 'ozone', 'bimbo', 'trace']
-) == [['h', 'e', 'l', 'l', 'o'],
-      ['a', ' ', 'e', ' ', 'z'],
-      ['b', 'i', 'm', 'b', 'o'],
-      ['i', ' ', 'm', ' ', 'n'],
-      ['t', 'r', 'a', 'c', 'e']]</pre>
+    <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 
 <p class="for_info_only">
     <strong>How it is used:</strong>
-    This is a type of restriction problem.
+    <i>
+        This is a type of restriction problem.
     You have rules and should try to find a combination that conforms to these rules.
     This concept can help you to solve scheduling conflicts and - a situation where you would encounter many variables
     and restrictions, among other things.
-
+    </i>
 </p>
 
 
-<p><strong>Precondition: </strong><br>
-    |crossword| = 5x5<br>
-    &forall; x ∈ crossword : 1 &le; x &le; 26
+<p><strong>Preconditions:</strong>
+    <ul>
+        <li><i>|crossword| = 5x5;</i></li>
+        <li><i>&forall; x ∈ crossword : 1 &le; x &le; 26.</i></li>
+    </ul>
 </p>
