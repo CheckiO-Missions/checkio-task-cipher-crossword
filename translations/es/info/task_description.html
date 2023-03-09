@@ -1,4 +1,4 @@
-<p>
+<p style="text-align: justify">
     Todo el mundo ha intentado resolver un crucigrama en alg&uacute;n momento de sus vidas,
     pero nosotros vamos a complicar las cosas un poco, adicionando un sistema de cifrado al
     juego cl&aacute;sico. Un crucigrama cifrado reemplaza las pistas para cada entrada con
@@ -10,7 +10,7 @@
     representen la misma letra. Todos los resultados deben ser palabras v&aacute;lidas en ingl&eacute;s.
 </p>
 
-<p>
+<p style="text-align: justify">
     Para esta misi&oacute;n deber&aacute;s resolver el crucigrama cifrado. Se te dar&aacute; la plantilla del crucigrama
     como una lista de listas (array 2D) con n&uacute;meros (de 0 a 26), donde <strong>0</strong> es una
     celda en blanco y los otros n&uacute;meros representan letras codificadas. Se te proporcionar&aacute;
@@ -30,13 +30,13 @@
 </p>
 
 <p>
-    <strong>Datos de Entrada: </strong>
+    <strong>Datos de Entrada:</strong>
     Un crucigrama cifrado como una lista de listas con enteros (<em>int</em>); y las palabras
     a utilizar, como una lista de cadenas (<em>str</em>).
 </p>
 
 <p>
-    <strong>Salida: </strong> La soluci&oacute;n del crucigrama, como una lista de listas con letras.
+    <strong>Salida:</strong> La soluci&oacute;n del crucigrama, como una lista de listas con letras.
 </p>
 
 
@@ -44,35 +44,25 @@
     <p>
         <strong>Ejemplo:</strong>
     </p>
-    <pre class="brush: python">checkio(
-    [
-        [21, 6, 25, 25, 17],
-        [14, 0, 6, 0, 2],
-        [1, 11, 16, 1, 17],
-        [11, 0, 16, 0, 5],
-        [26, 3, 14, 20, 6]
-    ],
-    ['hello', 'habit', 'lemma', 'ozone', 'bimbo', 'trace']
-) == [['h', 'e', 'l', 'l', 'o'],
-      ['a', ' ', 'e', ' ', 'z'],
-      ['b', 'i', 'm', 'b', 'o'],
-      ['i', ' ', 'm', ' ', 'n'],
-      ['t', 'r', 'a', 'c', 'e']]</pre>
+    <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
 </div>
 
 
 <p class="for_info_only">
     <strong>&iquest;C&oacute;mo se usa?:</strong>
-    Este es un ejemplo de problemas con restricciones, en donde se te indican
+    <i>
+        Este es un ejemplo de problemas con restricciones, en donde se te indican
     algunas reglas y debes tratar de encontrar  una combinaci&oacute;n que se ajuste
     a dichas reglas.  Este concepto puede ayudar, por ejemplo, a resolver conflictos
     con horarios - una situaci&oacute;n com&uacute;n en la que se encuentran muchas variables y
     restricciones- entre otras cosas.
-
+    </i>
 </p>
 
 
-<p><strong>Condiciones: </strong><br>
-    |crossword| = 5x5<br>
-    &forall; x ∈ crossword : 1 &le; x &le; 26
+<p><strong>Condiciones:</strong>
+    <ul>
+        <li><i>|crossword| = 5x5;</i></li>
+        <li><i>&forall; x ∈ crossword : 1 &le; x &le; 26.</i></li>
+    </ul>
 </p>
