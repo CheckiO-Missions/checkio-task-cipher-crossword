@@ -1,0 +1,61 @@
+<p style="text-align: justify">
+    Jeder hat in seinem Leben schon einmal versucht, ein Kreuzworträtsel zu lösen. 
+    Wir werden das klassische Rätsel mit einer Chiffre aufpeppen.
+    Bei einem Kreuzworträtsel mit Chiffre werden die Hinweise für jeden Eintrag durch Hinweise für jede weiße Zelle des Gitters ersetzt. 
+    Bei diesen Hinweisen handelt es sich um ganze Zahlen, die von 1 bis einschließlich 26 reichen. 
+    Das Ziel ist, wie bei jedem anderen Kreuzworträtsel, den richtigen Buchstaben für jede Zelle zu finden.
+    Bei einem Kreuzworträtsel mit Chiffre dienen die 26 Zahlen als Chiffre für die Buchstaben: Zellen mit übereinstimmenden Zahlen werden mit passenden Buchstaben gefüllt
+    mit übereinstimmenden Buchstaben gefüllt, und keine zwei Zahlen stehen für denselben Buchstaben. Alle resultierenden Einträge müssen gültige Wörter sein.
+</p>
+
+<p style="text-align: justify">
+    Für diese Aufgabe sollten Sie das Kreuzworträtsel mit der Chiffre lösen. Sie erhalten eine Kreuzworträtselvorlage als{% if is_js %}n Array von Arrays{% else %} Liste von Listen{% endif %} (2D-Array)
+    mit Zahlen (von 0 bis 26), wobei <strong>0</strong> eine leere Zelle ist und die anderen Zahlen verschlüsselte Buchstaben sind.
+    Sie erhalten eine{% if is_js %}n Array{% else %} Liste{% endif %} von Wörtern für das Kreuzworträtsel. Sie sollten diese Vorlage mit einem bestimmten Wort füllen und das
+    das gelöste Kreuzworträtsel als{% if is_js %}n array of arrays{% else %} list of lists{% endif %} mit Buchstaben zurück. Leere Zellen werden durch Leerzeichen ersetzt (0 =&gt; " ").
+</p>
+
+<p>
+    Die Wörter werden in Zeilen und Spalten ohne Diagonalen angeordnet.
+    Das Kreuzworträtsel enthält sechs Wörter mit jeweils 5 Buchstaben. Diese Wörter sind in einem Gitter angeordnet.
+</p>
+
+<p style="text-align: center;">
+    <img class="for_info_only" title="cipher-crossword" src="{{MEDIA}}cipher-crossword.png" alt="cipher-crossword" width="600px"/>
+    <img class="for_editor_only" title="cipher-crossword" src="{{MEDIA}}cipher-crossword.png" alt="cipher-crossword" width="380px"/>
+</p>
+
+<p>
+   <strong>Eingabe:</strong> Das Cipher-Kreuzworträtsel als{% if is_js %}n Array von Arrays mit Zahlen{% else %} Liste von Listen mit ganzen Zahlen{% endif %}. Wörter als{% if is_js %}n Array{% else %} Liste{% endif %} von Zeichenketten.
+</p>
+
+<p>
+   <strong>Ausgabe:</strong> Die Lösung des Kreuzworträtsels als{% if is_js %}n Array von Arrays{% else %} Liste von Listen{% endif %} mit Buchstaben.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Beispiele:</strong>
+    </p>
+    <pre class="brush: {% if is_js %}javascript{% else %}python{% endif %}">{{init_code_tmpl}}</pre>
+</div>
+
+
+<p class="for_info_only">
+    <strong>Wie es verwendet wird:</strong>
+    <i>
+        Dies ist eine Art von Restriktionsproblem.
+    Sie haben Regeln und sollten versuchen, eine Kombination zu finden, die mit diesen Regeln übereinstimmt.
+    Dieses Konzept kann Ihnen helfen, Planungskonflikte zu lösen und - eine Situation, in der Sie auf viele Variablen
+    und Einschränkungen, unter anderem.
+    </i>
+</p>
+
+
+<p><strong>Vorbedingungen:</strong>
+    <ul>
+        <li><i>|Kreuzworträtsel| = 5x5;</i></li>
+        <li><i>&forall; x ∈ Kreuzworträtsel: 1 &le; x &le; 26.</i></li>
+    </ul>
+</p>
